@@ -1,0 +1,86 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Slipity Pro",
+  "colors": {
+    "primary": "#eb8d00",
+    "light": "#ffb347",
+    "dark": "#c97400"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.svg",
+  "appearance": {
+    "default": "system"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Getting Started",
+        "icon": "rocket",
+        "pages": [
+          "index",
+          "getting-started/first-service",
+          "getting-started/screens",
+          "getting-started/unlock"
+        ]
+      },
+      {
+        "group": "Presenting",
+        "icon": "play",
+        "pages": [
+          "presenting/running-order",
+          "presenting/live-annotations",
+          "presenting/looks-and-clearing",
+          "presenting/stage-screens",
+          "presenting/remote-control",
+          "presenting/voice-follow"
+        ]
+      },
+      {
+        "group": "Building Presentations",
+        "icon": "pen-ruler",
+        "pages": [
+          "building/songs",
+          "building/scripture",
+          "building/themes-and-editor",
+          "building/media",
+          "building/sermon-notes"
+        ]
+      },
+      {
+        "group": "Bringing It In",
+        "icon": "file-import",
+        "pages": [
+          "importing/importing",
+          "importing/search"
+        ]
+      },
+      {
+        "group": "Going Further",
+        "icon": "sliders",
+        "pages": [
+          "going-further/recording-and-livestreaming",
+          "going-further/sync",
+          "going-further/settings",
+          "going-further/keyboard-shortcuts"
+        ]
+      },
+      {
+        "group": "Help",
+        "icon": "life-ring",
+        "pages": [
+          "help/troubleshooting",
+          "help/contact"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/Slipity"
+    }
+  }
+}
