@@ -24,6 +24,7 @@
           "index",
           "getting-started/first-service",
           "getting-started/screens",
+          "getting-started/iphone-and-ipad",
           "getting-started/unlock"
         ]
       },
@@ -32,11 +33,15 @@
         "icon": "play",
         "pages": [
           "presenting/running-order",
-          "presenting/live-annotations",
           "presenting/looks-and-clearing",
+          "presenting/slide-actions",
+          "presenting/countdowns-and-timers",
           "presenting/stage-screens",
-          "presenting/remote-control",
-          "presenting/voice-follow"
+          "presenting/audio",
+          "presenting/cameras",
+          "presenting/live-annotations",
+          "presenting/voice-follow",
+          "presenting/remote-control"
         ]
       },
       {
@@ -47,7 +52,9 @@
           "building/scripture",
           "building/themes-and-editor",
           "building/media",
-          "building/sermon-notes"
+          "building/translation",
+          "building/sermon-notes",
+          "building/set-builder"
         ]
       },
       {
@@ -64,6 +71,8 @@
         "pages": [
           "going-further/recording-and-livestreaming",
           "going-further/sync",
+          "going-further/copyright-and-ccli",
+          "going-further/siri-and-shortcuts",
           "going-further/settings",
           "going-further/keyboard-shortcuts"
         ]

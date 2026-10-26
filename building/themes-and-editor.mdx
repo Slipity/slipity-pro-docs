@@ -1,41 +1,81 @@
 ---
 title: "Themes and the slide editor"
-description: "Design slides once in a theme, and build moments with layers and timelines."
+description: "Design slides once in a theme, build moments with layers and timelines, and export a slide as a film."
 ---
 
 ## Themes
 
-A **theme** sets how a presentation's slides look: the fonts, the colours, the background and where the words go. A new library comes with three — for songs, scripture and sermons. Edit them, or make your own, in the **Theme Editor**.
+A **theme** sets how a presentation's slides look: fonts, colours, background and where the words go. A new library comes with three — for songs, scripture and sermons. Edit them, or make your own, in the **Theme Editor**.
 
-Choose the theme songs, scripture and imported files get in **Settings › Themes**, along with **Lines per Slide**.
+- Choose a presentation's theme from **Themes** in the toolbar, or in its inspector.
+- **New Theme from Selection…** on a slide's right-click menu makes a theme from how that slide looks.
+- Choose the themes new songs, scripture and imported files get in **Settings › Themes**.
 
 <Frame caption="To capture: The Theme Editor with the Lyric theme open.">
   <img src="/images/placeholder.svg" alt="Screenshot to come" />
 </Frame>
 
-
 ## The slide editor
 
-Choose **Edit** and open a slide to work on its layers: text, shapes, pictures, films, cameras, countdowns and web pages. Anything reaching past the slide's edges is drawn faded, so you can find it and drag it back.
+In **Edit**, open a slide to work on its layers. The editor has:
 
-<Frame caption="To capture: The slide editor with the layer list, the canvas and the inspector.">
+- the **slides** of the presentation down one side,
+- the **canvas**, where layers are moved, resized, turned and snapped to each other and the edges,
+- the **layer list**,
+- the **inspector**, with the slide's settings and the picked layer's,
+- the **timeline** below.
+
+Anything reaching past the slide's edges is drawn faded, so it can be found and dragged back.
+
+<Frame caption="To capture: The slide editor with the layer list, the canvas, the inspector and the timeline.">
   <img src="/images/placeholder.svg" alt="Screenshot to come" />
 </Frame>
 
+## Layers
+
+| Layer | |
+|---|---|
+| **Text** | Words, with full formatting. Chords can be drawn over them. |
+| **Scripture** | A passage and its reference. |
+| **Media** | A picture or film. Pictures have [Image Tools](/building/media#image-tools). |
+| **Camera** | A live camera, with its own [framing](/presenting/cameras). |
+| **YouTube** | A YouTube video, streamed on the screens. |
+| **Web page** | A webpage, shown as a picture and refreshed as often as you choose. |
+| **Timer** | A [countdown or elapsed time](/presenting/countdowns-and-timers). |
+| **Shape** | Rectangles, circles and more, with fills and borders. |
+| **QR code** | Drawn sharp at any size, with the margin it needs to scan. |
+| **Translation** | The words in another language. See [Translation](/building/translation). |
+| **Copyright** | The song's copyright line. |
+| **Group** | Layers kept together, to move and animate as one. |
+| **Annotations** | Lines drawn live. See [Live Annotations](/presenting/live-annotations). |
+
+A layer can be shown only when another has words — a reference box that disappears on slides without a reference.
 
 ## Timelines
 
-Every layer has a place on the slide's timeline: when it comes in, how — a fade, a move, a wipe — and when it goes. Take the slide live and the timeline plays on every screen.
+Every layer has a place on the slide's timeline: when it comes in, how — fades, moves, wipes, with curves — and when it goes. Films and sounds are clips with in and out points and transitions between them. Take the slide live and its timeline plays on every screen, in step.
+
+| Key | |
+|---|---|
+| **Space** | Play and pause |
+| **⌘T** | Split a clip at the playhead |
+| **⌥⌘[**, **⌥⌘]**, **⌥⌘T** | A transition at the start, end or both ends of a clip |
+| **← →** | Move the playhead a frame; with **Shift**, ten |
+
+**Markers** on the timeline can do something when they're reached.
 
 <Frame caption="To capture: The Salt & Light title slide with its layers laid out on the timeline.">
   <img src="/images/placeholder.svg" alt="Screenshot to come" />
 </Frame>
 
+## Export a slide as a film
+
+On the Mac, choose **File › Export Slide as Movie…** (**⇧⌘E**) to write the slide you're editing — timeline, films and sound — out as a film for social media or another venue's screens.
 
 ## Other editors
 
-- **Looks Editor** — which layers each screen shows. See [Looks](/presenting/looks-and-clearing).
+- **Looks Editor** — what each screen shows. See [Looks](/presenting/looks-and-clearing).
 - **Stage Editor** — stage screen layouts.
-- **Overlay Editor** — lower thirds, logos and anything that sits over the slides.
-- **Countdown Editor** — countdowns and timers.
+- **Overlay Editor** — lower thirds, logos and anything over the slides.
+- **Countdown Editor** — countdowns.
 - **CCLI Editor** — where the copyright line sits and how it looks.

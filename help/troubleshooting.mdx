@@ -1,26 +1,67 @@
 ---
 title: "Troubleshooting"
-description: "When a screen, an Apple TV or a purchase doesn't behave."
+description: "When a screen, an Apple TV, a remote or a purchase doesn't behave."
 ---
+
+## Screens
 
 <AccordionGroup>
   <Accordion title="A projector or TV isn't showing anything">
-    Check that the screen is on in the **Screens** menu (**⌥⌘1** for audience screens), then choose **Refresh Displays** (**⇧⌘R**). In **Settings › Screens**, make sure the display is chosen for a screen, and use **Identify Screens** to see which is which.
+    Check that screens are on in the **Screens** menu (**⌥⌘1** for audience, **⌥⌘2** for stage), then **Refresh Displays** (**⇧⌘R**). In **Settings › Screens**, check the display is chosen for a screen, and use **Identify Screens** to see which is which.
   </Accordion>
+  <Accordion title="The output is on the wrong display">
+    In **Settings › Screens**, choose the right display for each screen. Slipity Pro remembers each display by itself, so it stays put next time.
+  </Accordion>
+  <Accordion title="The picture is skewed or doesn't fill the screen">
+    Use **Corner Pin** in **Settings › Screens** to square it up, and the **Test Pattern** to check.
+  </Accordion>
+  <Accordion title="Words are on the screens but I can't see them in the preview">
+    The preview shows the screen picked above it. Choose **Program**, or the screen you're looking for, from the menu at the top of the preview.
+  </Accordion>
+</AccordionGroup>
+
+## Apple TV and remotes
+
+<AccordionGroup>
   <Accordion title="No Apple TV appears">
-    The Apple TV and this device must be on the same network, with Slipity Screen open on the TV. On the Mac, check that Slipity Pro may use the local network in **System Settings › Privacy & Security › Local Network**.
+    The Apple TV and your device must be on the same network, with Slipity Screen open on the TV. On the Mac, check that Slipity Pro may use the local network in **System Settings › Privacy & Security › Local Network**.
   </Accordion>
   <Accordion title="An Apple TV says it's in use by another Mac">
     Pair it again from this device. Pairing takes over from any Mac driving it now.
   </Accordion>
-  <Accordion title="The watermark is still showing after buying">
-    Open **Settings › Slipity Pro** and click **Restore Purchase**, signed in to the Apple Account you bought with. A purchase waiting for approval unlocks as soon as it's approved.
+  <Accordion title="A remote can't find the Mac">
+    Turn on **Allow Remote Control** on the Mac, and keep both on the same network. If the Mac was paired before and has been forgotten, **Pair…** again.
   </Accordion>
+</AccordionGroup>
+
+## Sound, cameras and listening
+
+<AccordionGroup>
   <Accordion title="Voice Follow isn't hearing anything">
     Check **Listen To** in **Settings › Voice Follow**, and that Slipity Pro may use the microphone and speech recognition in **System Settings › Privacy & Security**.
   </Accordion>
+  <Accordion title="A camera shows black">
+    Check the camera is chosen in **Settings › Inputs**, and that Slipity Pro may use the camera in **System Settings › Privacy & Security › Camera**.
+  </Accordion>
+  <Accordion title="A film plays but there's no sound">
+    Background media arrives muted, so it stays quiet under the words. Unmute it in the slide's inspector, or change how media arrives in **Settings › Audio & Video**.
+  </Accordion>
+</AccordionGroup>
+
+## Library and purchase
+
+<AccordionGroup>
   <Accordion title="A change on one device hasn't reached another">
-    Both devices need the same sync in **Settings › Sync** — the same iCloud account, or the same Google account. Screens, outputs and Looks stay with each device on purpose.
+    Both need the same sync in **Settings › Sync** — the same iCloud account, or the same Google account. Screens, outputs, Looks and the usage report stay with each device on purpose.
+  </Accordion>
+  <Accordion title="Every slide of an imported song is its own group">
+    Pick all its slides, right-click, and choose **Group › None**.
+  </Accordion>
+  <Accordion title="The watermark is still showing after buying">
+    Open **Settings › Slipity Pro** and choose **Restore Purchase**, signed in to the Apple Account you bought with. A purchase waiting for approval unlocks as soon as it's approved.
+  </Accordion>
+  <Accordion title="Sermon notes or the Set Builder say they can't read">
+    They use Apple Intelligence. Turn it on in **System Settings › Apple Intelligence & Siri**, and wait for it to finish getting ready.
   </Accordion>
 </AccordionGroup>
 

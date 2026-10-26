@@ -1,6 +1,6 @@
 ---
 title: "Remote control, MIDI and OSC"
-description: "Run a service from another device, a MIDI controller or a lighting desk."
+description: "Run a service from another device, a MIDI controller or a show controller."
 ---
 
 ## From iPhone or iPad
@@ -9,26 +9,32 @@ Any iPhone or iPad running Slipity Pro can control a Mac on the same network.
 
 <Steps>
   <Step title="On the Mac">Open **Settings › Remote Control** and turn on **Allow Remote Control**.</Step>
-  <Step title="On the iPhone or iPad">Turn on **Remote Control**, find the Mac in the list and choose **Pair…**.</Step>
-  <Step title="Type the code">The Mac shows a code. Type it on the remote. After that, choose **Control** to take over.</Step>
+  <Step title="On the iPhone or iPad">Turn on **Remote Control**. Macs that allow it appear in the list. Choose **Pair…**.</Step>
+  <Step title="Type the code">The Mac shows a code. Type it on the remote.</Step>
+  <Step title="Take control">Choose **Control**. **Stop Controlling** hands it back.</Step>
 </Steps>
 
-The remote shows the Mac's running order and what it's showing, and steps through the service from your hand.
+The remote shows the Mac's running order with pictures of its slides and what it's showing now, and steps through the service from your hand. The Mac shows who is controlling it.
+
+- **Forget** removes one Mac from a remote; **Forget All** on the Mac removes every paired remote.
+- A remote's Apple Watch and Live Activity follow the Mac too. See [iPhone, iPad and iPhone Duo](/getting-started/iphone-and-ipad).
 
 <Frame caption="To capture: An iPhone controlling a Mac: the running order with the Mac's live slide.">
   <img src="/images/placeholder.svg" alt="Screenshot to come" />
 </Frame>
 
-
 ## MIDI
 
-In **Settings › Remote Control**, set MIDI notes and messages to commands — next slide, clear, a Look — and send MIDI from a slide with **Add Action › Communication › MIDI…**.
+In **Settings › Remote Control › MIDI**, map notes and messages from a controller to commands — next slide, previous slide, clear, blackout, a Look — and choose what Slipity Pro **Sends**. A slide can send MIDI when it goes live with **Add Action › Communication › MIDI…**.
 
 ## OSC
 
-Turn on **Enable OSC Server** and choose a **UDP Port** to let a lighting desk or show controller drive Slipity Pro. Slides can send OSC to other equipment when they go live.
+Turn on **Enable OSC Server** and choose a **UDP Port** to let a lighting desk, show controller or companion app drive Slipity Pro. Add places to **Send To** for OSC going the other way, and send OSC from a slide with **Add Action › Communication › OSC…**.
 
 <Frame caption="To capture: Settings › Remote Control with MIDI and OSC sections.">
   <img src="/images/placeholder.svg" alt="Screenshot to come" />
 </Frame>
 
+## Siri and Shortcuts
+
+Many of the same commands are Shortcuts actions. See [Siri and Shortcuts](/going-further/siri-and-shortcuts).
