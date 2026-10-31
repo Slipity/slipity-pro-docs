@@ -22,4 +22,22 @@ Screens, outputs, Looks and the CCLI usage report stay with each device.
 
 ## Media files
 
-Choose whether each device keeps every media file, or downloads them when they're needed.
+Choose what each device keeps in **Download to This Mac** (or iPad, or iPhone):
+
+- **Everything** — every file in the library.
+- **What's Needed** — media in services changed or scheduled in the last month, every theme's and layout's, the audio playlists', and any Media panel list marked **Keep on This Mac**.
+- **Only When Used** — nothing until it's used.
+
+Whatever an open playlist uses is downloaded straight away, whichever you choose. To fetch one file sooner, use its download button in the [Media panel](/building/media#files-not-on-this-device).
+
+## Where media is kept
+
+On a Mac, media stays in the app's own folder unless you choose another. To keep it on an external drive or elsewhere, go to **Settings › Sync › Media Storage** and click **Choose Folder…**. This setting is there with sync off too.
+
+Imported media and everything downloaded from iCloud or Google Drive go there. Files are kept in a **Slipity Pro Media** folder inside the one you pick. Your library itself stays on the Mac, and other devices choose for themselves.
+
+Slipity Pro says how much it will copy and asks first. It copies and checks every file before removing the originals, and you can cancel partway with nothing changed. **Use Default** moves everything back.
+
+<Warning>Use a drive formatted as APFS or exFAT. FAT32 can't hold files over 4 GB. Don't point two Macs at the same folder unless they sync the same library: each removes files its own library no longer uses.</Warning>
+
+**If the drive isn't connected**, the library still opens, with a warning that its media is missing. Nothing downloads in the meantime, and anything you import waits on the Mac. Connect the drive and everything comes back without restarting, and what you imported moves across.
