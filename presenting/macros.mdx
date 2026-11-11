@@ -1,0 +1,82 @@
+---
+title: "Macros"
+description: "Group several actions into one macro, then run it from a slide, a countdown, the toolbar, MIDI or OSC."
+---
+
+A **macro** is a named group of actions that run together. It holds the same actions a slide can carry, such as a Clear, a Look, a stage layout or a MIDI cue. You make it once and then add it to slides as a single action.
+
+Say every sermon starts the same way: clear everything, make the Sermon Look live, put the preacher's notes on the stage screen and send the lighting desk its cue. You could add those four actions to every sermon slide by hand. A **Sermon** macro does the same job as one action.
+
+<Frame caption="To capture: Settings › Macros with three macros listed and the Show Macros in the Toolbar switch.">
+  <img src="/images/placeholder.svg" alt="Screenshot to come" />
+</Frame>
+
+## Making a macro
+
+Open **Settings › Macros** and choose **Add Macro**. In the editor that opens:
+
+- **Name**, **Color** and **Icon** set how the macro looks on its tile in the toolbar's grid. Pick a colour from the row of swatches or the colour picker. A new macro starts with the M icon. **None** leaves the tile without an icon.
+- **Actions** is the list of what the macro does. **Add Action** offers the same actions as a slide's Add Action menu. Click a row to change its settings or give it a delay. Use its switch to turn it off without removing it, and drag rows (or use **Move Up** and **Move Down**) to reorder them.
+- **Run By** gives the macro a MIDI message or an OSC address of its own (see [Running a macro by MIDI or OSC](#running-a-macro-by-midi-or-osc)).
+- **Run Now** tries the macro out. **Duplicate** copies it, and **Delete Macro** removes it.
+
+Back in the list, drag macros to change their order; the toolbar's grid uses the same order. Right-click a macro to edit, run, duplicate or delete it.
+
+Macros sync between your devices with the rest of the library.
+
+## Making a macro from a slide's actions
+
+When a slide already does two or more things, right-click it in Play and choose **Edit Actions › Make Macro from Actions…**. Give the macro a name, colour and icon, then choose **Make Macro**. On a device with Apple Intelligence, Slipity Pro suggests a name from what the actions do; type over it if you'd rather.
+
+The slide's actions move into the new macro and the slide gets one **Macro** action in their place. The macro also appears in **Settings › Macros**. A slide's Macro actions and a Play Audio with a lyric video's timings stay on the slide. **Edit › Undo** puts the actions back and removes the macro.
+
+## Adding a macro to a slide
+
+Right-click a slide and choose **Add Action › Macro**, then pick a macro. With several slides picked, each one gets it. When the slide goes live, the macro's actions run.
+
+You can still give the slide actions of its own next to the macro.
+
+### When the slide and its macro disagree
+
+**The slide's own action wins.** If one of the macro's actions does the same job as one the slide has, the macro's action is skipped. Two actions count as doing the same job when they:
+
+- make a Look live,
+- put a layout on the same stage screen,
+- start audio, a countdown, an overlay or live video,
+- send the same MIDI note or control, the same OSC address or the same webhook,
+- change the same camera's framing, start or stop the same recording or stream, or change the Voice Follow input.
+
+So a slide can use the **Sermon** macro and still pick a different Look for itself.
+
+A macro's **Clear** also leaves alone any layer the slide puts something on. If the macro clears everything and the slide shows an overlay, the overlay stays up.
+
+A delay on the slide's **Macro** action is added to each of the macro's own delays. A switched-off action on the slide doesn't override anything.
+
+## Running a macro when a countdown ends
+
+In a timer's settings, **On Complete › Run Macro** lists your macros. Tick as many as you like, alongside the other On Complete choices. See [Countdowns and timers](/presenting/countdowns-and-timers).
+
+## Running a macro from the toolbar
+
+Turn on **Show Macros in the Toolbar** in **Settings › Macros**. It's off by default. A **Macros** button then appears in the toolbar. When the window is too narrow for it, Macros moves into the toolbar's **•••** menu.
+
+The button opens a grid of every macro. Type to search by name, then click or tap a tile to run it. When only one macro matches, pressing Return runs it.
+
+To put a macro on a slide, drag its tile from the grid onto the slide in Play or in the Editor's slide list. The slide gets a **Macro** action, just as **Add Action › Macro** would give it. A slide that already runs that macro isn't given it twice. On iPad and iPhone the grid closes once the drag starts, so you can see the slides.
+
+<Frame caption="To capture: The Macros popover open from the toolbar, showing a searchable grid of coloured tiles.">
+  <img src="/images/placeholder.svg" alt="Screenshot to come" />
+</Frame>
+
+## Running a macro by MIDI or OSC
+
+In the macro's editor, under **Run By**:
+
+- **MIDI**: click **Learn**, then press the pad, key or pedal. Slipity Pro listens on every connected input, and the velocity or value doesn't matter.
+- **OSC Address**: type an address, such as `/slipity/macro/sermon`. Messages arrive on the port set in **Settings › MIDI & OSC**.
+
+A slide's own triggers only listen while its presentation is open. A macro's MIDI message and OSC address work whatever is open.
+
+<Note>
+A macro can't run another macro. If a Macro action ends up inside a macro, it's skipped.
+</Note>
