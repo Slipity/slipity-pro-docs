@@ -31,12 +31,18 @@ Click **Copy Claude Code Command**, paste it into Terminal and press Return. The
 
 ## Connecting Claude Desktop
 
-1. Click **Copy Claude Desktop Setup**.
-2. In Claude Desktop, open **Settings › Developer** and click **Edit Config**.
-3. Paste the setup into the file. If the file already lists other servers, add the `slipity-pro` entry alongside them inside `mcpServers`.
-4. Quit and reopen Claude Desktop.
+1. In **Settings › Integrations › AI Assistants**, click **Install in Claude Desktop…**.
+2. Claude Desktop opens and shows Slipity Pro as an extension. Click **Install**.
 
-Claude Desktop starts a small helper inside Slipity Pro, which opens Slipity Pro in the background if it isn't running. If you get a new token later, Claude Desktop picks it up without being set up again.
+That's all: Slipity Pro now appears among Claude's extensions, and Claude can use it in any conversation. If Slipity Pro isn't open when Claude needs it, the extension opens it in the background. If you make a new token later, the extension picks it up without being installed again.
+
+If Claude Desktop isn't on this Mac yet, the button shows the extension file, **Slipity Pro.mcpb**, in Finder. Open it once Claude Desktop is installed.
+
+<Note>Install the extension again if you move Slipity Pro to another folder, so Claude can find it to open it.</Note>
+
+## ChatGPT
+
+ChatGPT can't connect yet. Its connectors only reach MCP servers on the internet, and Slipity Pro's stays on your Mac, where only you can reach it. Claude Desktop, Claude Code, Cursor and other apps that run on your Mac can connect.
 
 ## Other assistants
 
@@ -51,6 +57,35 @@ Any assistant that supports MCP over HTTP can connect to the address shown under
 | Next and previous slide, go to a hot key, clear, blackout, hide or show slides, start and stop a countdown, make a Look live, show an overlay or stage layout, send and clear a stage message, play and stop audio, run a macro | Full Control |
 
 Lyrics are written the way the [Flow editor](/building/songs) reads them: a heading line such as *Verse 1* or *Chorus* starts a group, and an empty line ends a slide.
+
+## With Planning Center's MCP
+
+Planning Center has an MCP server of its own, which lets an assistant read your church's Planning Center account (Services, People, Check-Ins, Giving and more), with the same permissions you have there. Connect both to the same assistant and it can read what's planned in Planning Center and build it in Slipity Pro, in one conversation.
+
+**Connecting both:**
+
+- **Claude Desktop:** add Planning Center from Claude's connector directory, and install Slipity Pro as below.
+- **Claude Code:** run Slipity Pro's command from Settings, then add Planning Center's:
+
+```bash
+claude mcp add --transport http planning-center https://mcp.planningcenteronline.com/mcp
+```
+
+The first time it's used, Planning Center asks you to sign in and choose which products the assistant may read. See Planning Center's guide, [Connect AI tools to Planning Center](https://help.planningcenter.com/en/151880-connect-ai-tools-to-planning-center.html).
+
+**Things to ask:**
+
+| Ask | What happens |
+|---|---|
+| "Which songs in Sunday's plan aren't in Slipity Pro yet?" | Reads the plan in Planning Center and searches Slipity Pro's library for each song. |
+| "Make the songs that are missing, from the lyrics in Planning Center." | Makes each missing song in Slipity Pro from its words, where Planning Center has them. Needs **Prepare Services**. |
+| "Do the CCLI numbers in Sunday's plan match the songs in Slipity Pro?" | Compares the two, so your CCLI reporting is right. |
+| "Build Sunday's service in Slipity Pro from the plan, with the Scripture reading the plan lists." | Adds the songs and the passage to the service in order. Needs **Prepare Services**. |
+| "Who's leading worship on Sunday, and which songs has our church sung most in the last three months?" | Answered from Planning Center; Slipity Pro isn't needed for this one. |
+
+<Tip>To bring a whole plan in and keep it in step with Planning Center as it changes, use Slipity Pro's own Planning Center link in **Settings › Integrations**: it imports the plan in one go and keeps both in step. Use the two MCP servers together for questions, cross-checks and filling the gaps.</Tip>
+
+Planning Center's MCP server only reads Services, so an assistant can't change your plan in Planning Center this way. Changes are made in Slipity Pro.
 
 ## Staying in control
 
