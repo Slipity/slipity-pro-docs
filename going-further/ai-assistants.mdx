@@ -1,0 +1,63 @@
+---
+title: "AI Assistants"
+description: "Let Claude and other AI assistants on your Mac read your library, build services and, if you allow it, run the show."
+---
+
+Slipity Pro on the Mac can connect to an AI assistant on the same Mac, such as Claude Code, Claude Desktop, Cursor or any other app that supports MCP (the Model Context Protocol). Ask it to build Sunday's service from a sermon outline, write the slides for a new song, or check which songs are missing a CCLI number. It works with your real library while Slipity Pro is open.
+
+It's off until you turn it on, and you choose how far an assistant may go.
+
+<Note>AI assistants are on the Mac only. An iPhone or iPad can't host the connection.</Note>
+
+## Turning it on
+
+1. Open **Settings › Integrations** and find **AI Assistants**.
+2. Choose an **Access** level:
+
+| Access | What an assistant can do |
+|---|---|
+| **Off** | Nothing. No assistant can reach Slipity Pro. |
+| **Read Only** | Search the library, read songs and services, and see what's on the screens. |
+| **Prepare Services** | Read, plus build services and songs: add, swap and remove songs, add Scripture, make a new song from lyrics, and rewrite a song's words. Nothing on the screens changes. |
+| **Full Control** | Prepare, plus run the show: slides, hot keys, clearing, blackout, countdowns, Looks, overlays, stage layouts and messages, audio playlists and macros. |
+
+3. Connect your assistant, as below.
+
+Turn it back to **Off** at any time to disconnect every assistant at once.
+
+## Connecting Claude Code
+
+Click **Copy Claude Code Command**, paste it into Terminal and press Return. Then start Claude Code and ask it about your library.
+
+## Connecting Claude Desktop
+
+1. Click **Copy Claude Desktop Setup**.
+2. In Claude Desktop, open **Settings › Developer** and click **Edit Config**.
+3. Paste the setup into the file. If the file already lists other servers, add the `slipity-pro` entry alongside them inside `mcpServers`.
+4. Quit and reopen Claude Desktop.
+
+Claude Desktop starts a small helper inside Slipity Pro, which opens Slipity Pro in the background if it isn't running. If you get a new token later, Claude Desktop picks it up without being set up again.
+
+## Other assistants
+
+Any assistant that supports MCP over HTTP can connect to the address shown under **Status** (normally `http://127.0.0.1:47100/mcp`), sending the token from Claude Code's command as an `Authorization: Bearer` header.
+
+## What it can do
+
+| Tool | Access |
+|---|---|
+| Search the library, read a song or presentation, list services, see what's in a service, see what's on the screens, list countdowns, Looks, overlays, stage layouts, audio playlists and macros | Read Only |
+| New service, open a service, add, swap or remove a song, add Scripture, make a new song from lyrics, change a song's words | Prepare Services |
+| Next and previous slide, go to a hot key, clear, blackout, hide or show slides, start and stop a countdown, make a Look live, show an overlay or stage layout, send and clear a stage message, play and stop audio, run a macro | Full Control |
+
+Lyrics are written the way the [Flow editor](/building/songs) reads them: a heading line such as *Verse 1* or *Chorus* starts a group, and an empty line ends a slide.
+
+## Staying in control
+
+- **Only this Mac.** The connection listens on this Mac alone, never the network, and refuses web pages. Every request needs the token.
+- **New Token** makes a fresh token. Assistants set up with Claude Code's command must be connected again; Claude Desktop picks it up by itself.
+- **Undo.** A song or service an assistant changed can be undone with **Edit › Undo** in Slipity Pro.
+- **Activity.** Click **Activity…** to see everything assistants have done since Slipity Pro opened, and what each call said back.
+- **On the screens.** With Full Control, each change an assistant makes to the screens shows a notice in the window, with a button back to these settings.
+
+<Warning>With **Full Control**, an assistant can change what the room sees. Use **Prepare Services** for planning, and turn Full Control on only when you mean an assistant to run part of the show.</Warning>
