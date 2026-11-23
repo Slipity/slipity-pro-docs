@@ -1,12 +1,13 @@
 ---
 title: "Importing and sharing"
-description: "Bring in ProPresenter, PowerPoint, PDF, Planning Center, Canva, lyrics, notes and Bibles — and share your own."
+description: "Bring in ProPresenter, PowerPoint, PDF, Planning Center, OnStage, Canva, lyrics, notes and Bibles — and share your own."
 ---
 
 <CardGroup cols={2}>
   <Card title="ProPresenter" icon="file-import">ProPresenter 7 documents, playlists and themes, laid out and styled the way they were.</Card>
   <Card title="PowerPoint and PDF" icon="file-powerpoint">PowerPoint decks as slides you can edit; PDFs from Keynote, Google Slides or Canva as a picture of each page.</Card>
   <Card title="Planning Center" icon="calendar">A plan as a running order, with its songs and their arrangements.</Card>
+  <Card title="OnStage" icon="microphone">A service as a running order, with its songs' sections and slides.</Card>
   <Card title="Canva" icon="palette">Designs as slides or backgrounds, in 4K where it's available, through LightLoop.</Card>
   <Card title="Files" icon="file-lines">Plain text, ChordPro and OnSong songs, sermon notes, and Bibles.</Card>
 </CardGroup>
@@ -44,6 +45,26 @@ A file whose name is already a presentation asks whether to **replace** it, brin
 </Steps>
 
 Rearrange the playlist, and the order goes back to the plan.
+
+## OnStage
+
+OnStage connects with an API key your church makes, rather than a sign-in.
+
+<Steps>
+  <Step title="Make a key">In OnStage, an Owner or Admin goes to **Settings › Connections › API** and creates an API client. Copy its **client ID** and **secret**.</Step>
+  <Step title="Connect">In Slipity Pro, open **Settings › Integrations › OnStage**, paste the client ID and secret, and choose **Connect**. The team's name appears once OnStage accepts them. The secret is kept in the Keychain.</Step>
+  <Step title="Import a Service">Choose **Import a Service…** there, or **File › Import › OnStage Service…** on the Mac (the sidebar's **+** button on iPad and iPhone). Pick one of the upcoming services.</Step>
+</Steps>
+
+The service arrives as a playlist, marked with a microphone in the sidebar:
+
+- Each song becomes a presentation, its sections as groups and its slides cut as OnStage cuts them. A section sung twice is one group; sections the arrangement leaves out stay out. The artist, copyright and CCLI number come with it, for the [CCLI report](/going-further/copyright-and-ccli).
+- A song already in your library by the same title is used, not duplicated.
+- The service's other items come in as headers and placeholders, unless **Import Songs Only** is on.
+
+To bring it up to date, choose **Update** in the service list, or right-click the playlist and choose **Update from OnStage**. Anything you added to the playlist stays where you put it, and a song whose words changed in OnStage is updated, unless you've edited its words here. A placeholder you fill, like the Message, comes in filled in later services too. **Unlink from OnStage** makes it an ordinary playlist.
+
+<Note>Changes made in Slipity Pro aren't sent back to OnStage. To stop Slipity Pro reading your team, choose **Disconnect**, and delete the API client in OnStage.</Note>
 
 ## Canva
 

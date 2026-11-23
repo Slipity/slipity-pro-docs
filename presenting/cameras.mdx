@@ -1,11 +1,11 @@
 ---
 title: "Cameras and Camera Follow"
-description: "Live cameras on the screens, framed by hand or following whoever is speaking."
+description: "Live cameras on the screens, framed by hand or following whoever is speaking, switched from the Capture panel."
 ---
 
 ## Add a camera
 
-Connect a camera or capture card, then add it in **Settings › Inputs** under **Video Inputs**. Give it a name, and choose how it **Fits** the screen.
+Connect a camera or capture card, then add it in **Settings › Inputs** under **Video Inputs**. Give it a name, and choose how it **Fits** the screen. An iPhone, iPad or another Mac can be a camera too — see [Slipity Cameras](#slipity-cameras).
 
 A camera can go on the screens as:
 
@@ -41,9 +41,64 @@ A camera layer on a slide can have its own framing, so the same camera can be wi
   <img src="/images/placeholder.svg" alt="Screenshot to come" />
 </Frame>
 
+## Slipity Cameras
+
+An iPhone, iPad or Mac running Slipity Pro can be a wireless camera for the one running the service. It frames its own shot with Follow, from the whole of its camera's picture, and sends that shot over the network at 1080p — sharper than cutting a close shot out of a picture already made small to send.
+
+### Turn a device into a camera
+
+1. On the device that will be the camera, open **Settings › Inputs** and choose **Use This Device as a Camera…**.
+2. It fills its screen with what it's sending and waits. Choose which of its cameras to send at the bottom.
+3. On the device running the service, open **Settings › Inputs**. The camera appears under **Slipity Cameras**; choose **Pair…** and type the code shown on the camera.
+4. Choose **Add Input**. It's now a video input like any other, and can be chosen as the **Device** of an existing one.
+
+Once paired, the two find each other again by themselves. The camera keeps its screen awake, shows **LIVE** while it's sending, and shows **Following** or **Looking** while Follow is on. **Stop Camera** ends it.
+
+<Frame caption="To capture: An iPhone in camera mode, with the code to pair and the shot it's sending.">
+  <img src="/images/placeholder.svg" alt="Screenshot to come" />
+</Frame>
+
+### Framing a Slipity Camera
+
+Set its framing on the device running the service, as for any camera — **Off**, **Fixed** or **Follow**, the shot size, and who to follow. The camera does the framing itself. A tap on a person in the viewfinder goes to the camera, which locks onto them. **Keep Clear of Overlays On** works too: what that screen's slides put over the camera is sent to it, and it moves its shot to keep the person clear.
+
+A Slipity Camera sends one framed shot, so every screen showing it shows the same shot. The camera badge and viewfinder show how its Follow is getting on.
+
+<Tip>Use Wi-Fi that isn't busy, or the same network as the Mac by cable where you can. Three Slipity Cameras at 1080p fit comfortably on a good network. **Settings › Inputs** shows each camera's round trip.</Tip>
+
+<Note>A Slipity Camera sends pictures only, not sound. Use a microphone or the sound desk for sound.</Note>
+
+## The Capture panel
+
+The **Capture** panel is for working cameras, recordings and livestreams during a service. Turn on **Capture Button** in **Settings › Appearance**, then choose **Capture** in the toolbar. It opens where the Audio panel is, and on iPhone, and iPad upright, as a sheet over the slides.
+
+<Frame caption="To capture: The Capture panel beside the running order, with three cameras, one live.">
+  <img src="/images/placeholder.svg" alt="Screenshot to come" />
+</Frame>
+
+### Switching cameras
+
+Every video input is a live tile. **Click a camera to put it on the screens** on the Video Input layer; the live one is outlined in red and marked **LIVE**. Right-click (or touch and hold) a tile for **Put on the Screens**, **Show Framing** and **Take Off**.
+
+Choose how the switch happens with the menu beside the tiles:
+
+| Switch | What it does |
+|---|---|
+| **Cut** | Straight to the new camera. |
+| **Fade 1s** / **Fade 2s** | A crossfade of one or two seconds. |
+| **Default** | The Background Transition chosen at the bottom of the Media panel. |
+
+The shown camera's picture sits above the tiles, and its **Off / Fixed / Follow** framing below them, so the tiles stay where they are as you move between cameras. Click a tile's framing button (top right) to see a camera's framing without putting it on the screens.
+
+On the Mac the cameras are kept open while the panel is, so a switch is immediate. On iPhone and iPad a camera of the device's own shows its picture once the screens are using it; Slipity Cameras always show theirs.
+
+### Recording and livestreaming
+
+Below the cameras, each recording and livestream set up in **Settings › Capture** has its own **Record** or **Go Live** button and its time. Stopping one asks first, so a stray click doesn't end it. See [Recording and livestreaming](/going-further/recording-and-livestreaming).
+
 ## Changing framing during a service
 
-Change a camera's framing from the **Screens** menu on the Mac, the **•••** menu on iPad and iPhone, a slide (**Add Action › Camera Framing**), a remote, or Siri and Shortcuts (**Set Camera Framing**). The change stays, as a robotic camera stays where it was last sent.
+Change a camera's framing from the Capture panel, the **Screens** menu on the Mac, the **•••** menu on iPad and iPhone, a slide (**Add Action › Camera Framing**), a remote, or Siri and Shortcuts (**Set Camera Framing**). The change stays, as a robotic camera stays where it was last sent.
 
 ## iPhone Duo's back screen
 
